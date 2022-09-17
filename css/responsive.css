@@ -1,0 +1,85 @@
+@media screen and (max-width: 992px) {
+  .header .nav {
+    width: 100%;
+    flex-direction: column;
+    top: 64px;
+    left: 0;
+    background: #fff;
+    position: fixed;
+    transition: all 400ms;
+    z-index: -2;
+  }
+  .header .nav li {
+    border-bottom: 1px solid #ebebeb;
+    padding: 6px 4px;
+  }
+  .header .nav li a {
+    font-size: 12px;
+  }
+  .header .nav li a:hover {
+    color: #35a1e9 !important;
+  }
+
+  .header .nav.show {
+    transform: translateY(-150%);
+  }
+
+  .home-slider--wrapper__inner .container h1 {
+    font-size: 44px;
+    margin: 0 auto;
+    width: 60%;
+    line-height: 1.4;
+  }
+
+  footer .location span {
+    line-height: 2.5;
+  }
+
+  footer .links .contact-us {
+    padding-top: 17px;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .our_team {
+    padding: 50px 0px 95px;
+  }
+  .Team_banner h1 {
+    font-size: 41px;
+    line-height: 0px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .our_team .Cards .att-item-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .our_team .Cards .att-image,
+  .our_team .Cards .att-infor {
+    width: 80%;
+  }
+  .our_team .Cards .att-infor {
+    left: 50;
+  }
+}
+@media screen and (max-width: 500px) {
+  .About-us h3 {
+    font-size: 35px;
+  }
+  .Team_banner h1 {
+    font-size: 42px;
+    padding: 0px 10px;
+    line-height: 5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home-slider--wrapper__inner .container h1 {
+    margin: 0px;
+    width: 100%;
+    font-size: 38px;
+  }
+  .header .logo img {
+    display: none;
+  }
+}

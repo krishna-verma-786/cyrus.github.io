@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --hover-color: #35a1e9;
+  --main-color: #0172b6;
+  --secondary-color: #4a4a4a;
+  --light_gray-color: rgb(203, 201, 201, 0.5);
+  --Montserrat: "Montserrat", sans-serif;
+  --Roboto: "Roboto", sans-serif;
+  --Libre: "Libre Baskerville", serif;
+}
+.main_header {
+  /* padding: 5px; */
+  border-bottom: 1px solid rgb(203, 201, 201, 0.4);
+}
+.main_header .call-us p {
+  display: inline-block;
+  margin-bottom: 0px;
+  color: rgb(203, 201, 201, 0.7);
+  font-family: var(--Montserrat);
+  font-size: 11px;
+  font-weight: 400;
+}
+.main_header .call-us span {
+  font-family: var(--Montserrat);
+  font-size: 14px;
+  color: var(--main-color);
+  font-weight: 200;
+}
+.main_header .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_header .nav li a {
+  /* color: var(--main-color); */
+  color: var(--secondary-color);
+  border-left: 1px solid lightgray;
+  cursor: pointer;
+}
+.main_header .nav li a:hover {
+  color: #35a1e9;
+}
+/* Main header end  */
+.header {
+  position: sticky;
+  top: -1px;
+  width: 100%;
+  z-index: 99;
+  color: white;
+  background-color: #fff;
+  padding: 9px 0px;
+}
+
+.boxShadow {
+  box-shadow: 0 2px 10px rgb(0, 0, 0, 0.2);
+}
+
+.header nav a {
+  /* font-family: var(--Montserrat); */
+  font-family: var(--Libre);
+  position: relative;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  margin: 0px 6px;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 14px;
+}
+.header nav a.Active {
+  color: #35a1e9 !important;
+}
+@media screen and (min-width: 992px) {
+  .header nav a:after {
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: -14px;
+    transition: 0.3s;
+  }
+  .header nav a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.header nav a:hover {
+  color: var(--main-color) !important;
+}
+
+.header .logo {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: var(--Libre);
+  color: #4a4f55;
+}
+.header #toggleMe {
+  box-shadow: none;
+}
+/* Home section */
+/*  */
+.home-slider {
+  position: relative;
+  overflow: hidden;
+}
+.home-slider * {
+  outline: none;
+}
+.home-slider--wrapper__inner {
+  min-height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.home-slider--wrapper__inner:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.home-slider--wrapper__inner .container {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+.home-slider--wrapper__inner .container h3 {
+  font: 400 24px/1 var(--Libre);
+  margin: 0 0 20px;
+  text-transform: capitalize;
+}
+.home-slider--wrapper__inner .container h1 {
+  font: 600 52px/1 var(--Libre);
+  margin: 0 0;
+  text-transform: uppercase;
+}
+.home-slider--wrapper__inner .container p {
+  font: 400 14px/24px var(--Libre);
+  margin: 0 auto 30px auto;
+  max-width: 600px;
+  color: #cbc6c0;
+}
+
+.home-slider--nav {
+  position: absolute;
+  top: 40vh;
+  width: 100%;
+}
+.home-slider--nav div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  background: #6f6863;
+  color: #3c3530;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 35px;
+  position: absolute;
+  left: 50px;
+  top: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.home-slider--nav div.next {
+  right: 50px;
+  left: auto;
+}
+.home-slider--nav div:hover {
+  background: #3c88e7;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 991px) {
+  .home-slider--wrapper__inner .container h3 {
+    font-size: 22px;
+  }
+  .home-slider--wrapper__inner .container h1 {
+    font-size: 55px;
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .home-slider--wrapper__inner {
+    padding-top: 40px;
+  }
+  .home-slider--wrapper__inner .container h3 {
+    display: none;
+  }
+  .home-slider--wrapper__inner .container h1 {
+    font-size: 40px;
+    width: 100%;
+  }
+  .home-slider--nav {
+    display: none;
+  }
+}
+
+.home-slider--wrapper__inner button {
+  font-family: var(--Montserrat);
+  background-color: #0172b6;
+  color: #fff;
+  border: 1px solid #0172b6;
+  padding: 10px 48px;
+  font-weight: bold;
+  /* word-spacing: px; */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--Montserrat);
+  border-radius: 30px;
+  font-size: 14px;
+  box-shadow: 0px 2px 19px 0px rgba(0, 0, 0, 0.3);
+}
+.home-slider--wrapper__inner button:hover {
+  background-color: #35a1e9;
+  color: #fff;
+  border: 1px solid #35a1e9;
+}
+/* Landing page End */
+
+/* About Section Started */
+
+.About-us h4 {
+  font-weight: bold;
+  color: var(--main-color);
+  letter-spacing: 2px;
+  font-size: 25px;
+  position: relative;
+  font-family: var(--Montserrat);
+}
+
+.About-us h3 {
+  font-size: 35px;
+  color: var(--main-color);
+  margin-bottom: 31px;
+  font-weight: 700;
+  font-family: var(--Libre);
+  position: relative;
+}
+.About-us h3::after {
+  content: "";
+  bottom: -20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--light_gray-color);
+}
+.About-us h3::before {
+  content: "";
+  bottom: -20px;
+  left: 50%;
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background-color: var(--main-color);
+  margin-left: -50px;
+}
+.About-us p {
+  font-family: var(--Montserrat);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.About-us img {
+  width: 100%;
+}
+/* About us End here */
+/* Footer start */
+
+footer {
+  background-color: #1d212c;
+  color: white;
+  font-family: var(--Montserrat);
+}
+
+footer .Newsletter {
+  padding-bottom: 40px;
+}
+footer .Newsletter input {
+  padding: 23px 15px;
+}
+footer .Newsletter input:focus {
+  box-shadow: none;
+}
+footer .Newsletter label {
+  font-size: 19px;
+  font-family: var(--Montserrat);
+}
+
+footer .Newsletter span {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  color: white;
+  letter-spacing: 1px;
+  font-family: var(--Roboto);
+  font-weight: 400;
+}
+footer .location {
+  margin-bottom: 20px;
+}
+footer .location .col-md-4:hover {
+  color: #35a1e9;
+}
+footer .location i {
+  font-size: 18px;
+}
+footer .location span {
+  margin-right: 29px;
+}
+
+footer .links .contact-us button {
+  font-family: var(--Montserrat);
+  background-color: #0172b6;
+  color: #fff;
+  border: 1px solid #0172b6;
+  padding: 10px 18px;
+  font-weight: bold;
+  word-spacing: px;
+  /* border-radius: 30px; */
+  font-size: 14px;
+  box-shadow: 0px 2px 19px 0px rgba(0, 0, 0, 0.3);
+}
+.footer .links i {
+  font-size: 20px;
+  background: white !important;
+  width: 30px;
+}
+footer .links .contact-us button:hover {
+  background-color: #35a1e9;
+  color: #fff;
+  border: 1px solid #35a1e9;
+}
+footer .links .contact-us input,
+footer .links textarea {
+  border-radius: 0px;
+}
+footer .footer-contact-us {
+  font-family: var(--Montserrat);
+  font-weight: bold;
+}
+footer .links textarea::placeholder,
+footer .links .contact-us input::placeholder {
+  font-size: 12px;
+}
+footer .links li a i {
+  font-size: 20px;
+  background: white;
+  width: 30px;
+  border-radius: 50%;
+  height: 30px;
+  color: #1d212c;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms;
+}
+footer .links li a i:hover {
+  background-color: #35a1e9;
+  color: white;
+}
+footer hr {
+  margin: 0px;
+}
+footer h6 {
+  padding: 20px 0px;
+}
+
+footer .footer-text {
+  font-family: var(--Montserrat);
+  font-size: 11px;
+  color: rgb(203, 201, 201);
+  line-height: 20px;
+  padding: 10px 5px;
+}
+
+footer hr {
+  background: #4a4a4a;
+}
+
+footer .copyright {
+  color: var(--light_gray-color);
+}
