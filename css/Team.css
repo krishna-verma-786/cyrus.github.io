@@ -93,6 +93,7 @@
   color: #000;
   line-height: 2;
   font-family: var(--Montserrat);
+  text-align: justify;
 }
 /*Cards*/
 .our_team .att-item-wrap {

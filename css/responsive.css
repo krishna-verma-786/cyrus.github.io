@@ -48,6 +48,13 @@
     font-size: 41px;
     line-height: 0px;
   }
+
+  .our_team .Team-info h3 {
+    font-size: 32px;
+  }
+  .our_team .Team-info p {
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 576px) {
   .our_team .Cards .att-item-wrap {
